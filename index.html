@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/cajeroatm/css/bancomain.css">
+    
+    <title>atm</title>
+</head>
+<body>
+    <section class="containerprincipal">
+        <form>
+            <select id="cuenta" onchange="cuentasUsuario()" class="numcuenta">
+                <option  value="0">Debe agrega una cuenta de persona1 o persona2</option>
+                <option  value="100"> persona1 - cuenta: 4115 5248 8547</option>
+                <option  value="10000">persona2 - cuenta: 4115 5248 8547</option>
+            </select>
+
+            <p class="saldo">Su cuenta actual es: <br>
+                 <input type="text" id="saldoActual"  size="20" placeholder="Saldo hasta el momento">
+            </p>
+            
+            <form action="" method="post">
+
+                <div class="saldoactual">
+                <input type="text" name="verificar" placeholder="Verificar su monto actual">
+                <button type="button" class="btn-verificar" onclick="verificarSaldo()">Verificar</button>
+                </div>
+                <hr>
+                <input type="text" name="deposito" placeholder="Ingrese un deposito">
+                <button type="button" onclick="depositarDinero()" class="btn-depositar">Depositar</button>
+                </br> 
+                <input type="text" name="retirar" placeholder="Retirar monto establecido">
+                <button type="button" onclick="retirarDinero()" class="btn-retirar">Retirar</button>
+                <hr>
+                
+            </form>
+            <a href="login.html">
+                <button class="volver-atras">* Volver a la pantalla principal *</button>
+            </a> 
+        </section>
+    <script src="script.js"></script>
+</body>
+</html>
